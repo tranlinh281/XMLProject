@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xsd:schema version="1.0"
+           xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+           xmlns="https://github.com/tranlinh281/schema/listShoes"
+           xmlns:shoes="https://github.com/tranlinh281/schema/shoes"
+           targetNamespace="https://github.com/tranlinh281/schema/listShoes"
+           elementFormDefault="qualified">
+    <xsd:import namespace="https://github.com/tranlinh281/schema/shoes" schemaLocation="shoes.xsd"/>
+    <xsd:element name="ListShoes" xmlns="https://github.com/tranlinh281/schema/listShoes">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="shoes:Shoes" minOccurs="0" maxOccurs="unbounded" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

@@ -20,11 +20,11 @@ public class XMLGenerator {
         for (String schema : Sources.SCHEMAS) {
             System.out.println("Starting to generate file: " + schema);
             try {
-                JAXBUtil.generateClassFromSchema(schema, "");
+                JAXBUtil.generateClassFromSchema(schema, ".shoes");
                 System.out.println("Object generated");
             } catch (IOException e) {
                 e.printStackTrace();
-                System.out.println("XMLGenerator: " + e);
+                System.out.println("XMLShoesGenerator: " + e);
             }
             System.out.println();
         }

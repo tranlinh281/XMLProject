@@ -19,8 +19,8 @@ import javax.xml.transform.dom.DOMResult;
 public class DBUtils implements Serializable {
     public static Connection createConnection() throws SQLException, ClassNotFoundException{
         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-        String url = "jdbc:sqlserver://localhost:1433;databaseName=TouristDB";
-        Connection connection = DriverManager.getConnection(url, "sa", "Nh@tquang98");
+        String url = "jdbc:sqlserver://localhost:1433;databaseName=ShoesDB";
+        Connection connection = DriverManager.getConnection(url, "sa", "123456");
         return connection;
     }
     

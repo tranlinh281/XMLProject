@@ -1,7 +1,5 @@
-package linhtt.generated;
 
-
-
+package java.linhtt.generated;
 
 import javax.xml.bind.annotation.XmlRegistry;
 
@@ -32,19 +30,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Phones }
+     * Create an instance of {@link Giaytots }
      * 
      */
-    public Phones createPhones() {
-        return new Phones();
+    public Giaytots createGiaytots() {
+        return new Giaytots();
     }
 
     /**
-     * Create an instance of {@link Phone }
+     * Create an instance of {@link Giaytot }
      * 
      */
-    public Phone createPhone() {
-        return new Phone();
+    public Giaytot createGiaytot() {
+        return new Giaytot();
     }
 
 }

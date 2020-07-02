@@ -23,7 +23,7 @@ import org.xml.sax.InputSource;
 
 /**
  *
- * @author macos
+ * @author TranLinh
  */
 public class JAXBUtil implements Serializable {
        public static void generateClassFromSchema(String filePath, String location) throws IOException {

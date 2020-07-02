@@ -8,29 +8,29 @@ package linhtt.constants;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- *
- * @author macos
- */
 public class Sources {
-    public static final String TOUR = "https://clevertech.vn";
+    
+    public static final String XML_PATH = "WEB-INF\\assets\\configs\\xml\\shoes.xml";
     public static final String PACKED_GENERATED_NAME = "java.linhtt.generated";
-    private static final String TRONGNUOC_XSL_PATH = "WEB-INF\\xsl\\phoneClevertech.xsl";
+    private static final String GIAYTOT_XSL_PATH = "WEB-INF\\xsl\\giaytot.xsl";
+    private static final String TIMAN_XSL_PATH = "WEB-INF\\xsl\\timan.xsl";
 
-    
-    public static final List<String> SOURCES = Arrays.asList(
-        TOUR
-    );
-    
     public static final List<String> SCHEMAS = Arrays.asList(
-        "web\\WEB-INF\\xsd\\mobilephone.xsd",
-        "web\\WEB-INF\\xsd\\mobilephones.xsd"
-            
+            "web\\WEB-INF\\xsd\\shoes.xsd",
+            "web\\WEB-INF\\xsd\\listShoes.xsd"
     );
     
-    public static final List<String> STYLE_SHEETS = Arrays.asList(
-        TRONGNUOC_XSL_PATH
+    public static final List<String> SCHEMAS_GIAYTOT = Arrays.asList(
+            "web\\WEB-INF\\xsd\\giaytot.xsd",
+            "web\\WEB-INF\\xsd\\giaytots.xsd"
+    );
+
+    public static final List<String> STYLE_SHEETS_GIAYTOT = Arrays.asList(
+            GIAYTOT_XSL_PATH
     );
     
-    public static final String XML_PATH="WEB-INF\\clevertech.xml";
+    public static final List<String> STYLE_SHEETS_TIMAN = Arrays.asList(
+            TIMAN_XSL_PATH
+    );
+
 }

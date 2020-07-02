@@ -35,6 +35,7 @@ public class UltimateURIResolver implements URIResolver, Serializable {
 
     @Override
     public Source resolve(String href, String base) throws TransformerException {
+        System.out.println("reso;");
         if (href != null) {
             try {
                 //     URLConnection urlConnection = (URLConnection) new URL(href).openConnection();

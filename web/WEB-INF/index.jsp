@@ -13,7 +13,7 @@
     </head>
     <body>
         <h1>Login!</h1>
-        <form action="CrawlerServlet" method="POST">
+        <form action="CrawlGiaytot" method="POST">
             <input type="submit" value="Crawl" />
         </form>
     </body>
