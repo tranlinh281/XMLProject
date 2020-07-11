@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<ListShoes xmlns="https://github.com/tranlinh281/schema/listShoes"
+<ListShoes xmlns="https://linhtt.org/schema/listShoes"
     timan_nam_link="https://timan.vn/giay-nam"
     timan_nu_link="https://timan.vn/giay-nu"
     giaytot_link="https://www.giaytot.com/giay-dep-nam.html"
     host="https://timan.vn"
+    hudo_nike="https://giayhodu.vn/collections/giay-nike"
 >
     
 </ListShoes>

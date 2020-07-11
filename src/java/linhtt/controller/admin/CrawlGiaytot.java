@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import javax.xml.transform.dom.DOMResult;
 import linhtt.resolvers.Crawler;
+import linhtt.resolvers.DataResolver;
 //import linhtt.resolvers.DataResolver;
 
 /**
@@ -36,14 +37,13 @@ public class CrawlGiaytot extends HttpServlet {
         try {
             String realPath = request.getServletContext().getRealPath("/");
             String xmlPath = realPath + Sources.XML_PATH;
-        //    String xmlPath = Source.XML_PATH;
             for (String path: Sources.STYLE_SHEETS_GIAYTOT) {
                 String xslPath = realPath + path;
               
                
                 DOMResult result = Crawler.crawl(xmlPath, xslPath);
-//                 DataResolver dataResolver = new DataResolver();
-//                 dataResolver.saveDomResultToDatabaseName(result);
+                 DataResolver dataResolver = new DataResolver();
+                 dataResolver.saveDomResultToDatabase(result);
                    
            }
             

@@ -12,7 +12,7 @@ public class Sources {
     
     public static final String XML_PATH = "WEB-INF\\assets\\configs\\xml\\shoes.xml";
     public static final String PACKED_GENERATED_NAME = "java.linhtt.generated";
-    private static final String GIAYTOT_XSL_PATH = "WEB-INF\\xsl\\giaytot.xsl";
+    private static final String GIAYTOT_XSL_PATH = "WEB-INF\\xsl\\hudo.xsl";
     private static final String TIMAN_XSL_PATH = "WEB-INF\\xsl\\timan.xsl";
 
     public static final List<String> SCHEMAS = Arrays.asList(

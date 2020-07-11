@@ -1,6 +1,7 @@
 
 package linhtt.generated.shoes;
 
+import linhtt.generated.shoes.ListShoes;
 import javax.xml.bind.annotation.XmlRegistry;
 
 

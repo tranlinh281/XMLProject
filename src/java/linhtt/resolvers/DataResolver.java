@@ -1,58 +1,54 @@
-///*
-// * To change this license header, choose License Headers in Project Properties.
-// * To change this template file, choose Tools | Templates
-// * and open the template in the editor.
-// */
-//package linhtt.resolvers;
-//
-//import daos.BankDAO;
-//import daos.StockDAO;
-//import generated.bank.Bank;
-//import generated.bank.Banks;
-//import generated.stock.Stocks;
-//import generated.stock.Stock;
-//
-//import java.io.Serializable;
-//import java.sql.SQLException;
-//import javax.xml.bind.JAXBException;
-//import javax.xml.transform.dom.DOMResult;
-//import utils.JAXBUtil;
-//
-///**
-// *
-// * @author dungntmse63284 
-// */
-//public class DataResolver implements Serializable {
-//    public void saveDomResultToDatabase(DOMResult domResult)throws JAXBException, SQLException, ClassNotFoundException{
-//        Stocks stocks = new Stocks();
-//        stocks = (Stocks) JAXBUtil.unmarshal(stocks.getClass(), domResult.getNode());
-//        StockDAO stockDAO = new StockDAO();
-//        for (Stock stock : stocks.getStock()) {
-//   //        System.out.println(stock.getSymbol()+"-"+stock.getPe()+"-"+stock.getEps()+"-"+stock.getRoa()+"-"+stock.getRoe()
-//  //          +"-"+stock.getBeta());
-//  //        System.out.println(stock.getMarketCap());
-//            
-////            System.out.println(stock.getExchange());
-//              stockDAO.insertStock(stock);
-//              
-//            //insertStock(stockDAO, stock);
-//        }
-//            
-//        
-//    }
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package linhtt.resolvers;
+
+
+import java.io.Serializable;
+import linhtt.generated.shoes.ListShoes;
+import linhtt.generated.shoes.Shoes;
+import java.sql.SQLException;
+import javax.xml.bind.JAXBException;
+import javax.xml.transform.dom.DOMResult;
+import linhtt.utils.JAXBUtil;
+
+/**
+ *
+ * @author dungntmse63284 
+ */
+public class DataResolver implements Serializable {
+    public void saveDomResultToDatabase(DOMResult domResult)throws JAXBException, SQLException, ClassNotFoundException{
+        ListShoes lShoes = new ListShoes();
+        lShoes = (ListShoes) JAXBUtil.unmarshal(lShoes.getClass(), domResult.getNode());
+//        StockDAO shoesDAO = new StockDAO();
+        for (Shoes shoes : lShoes.getShoes()) {
+           System.out.println(shoes.getBrand()+"-"+shoes.getGender()+"-"+shoes.getDescription()+"-"+shoes.getImgSrc()+"-"+shoes.getLinkProduct()
+            +"-"+shoes.getName());
+  //        System.out.println(shoes.getMarketCap());
+            
+//            System.out.println(shoes.getExchange());
+//              shoesDAO.insertStock(shoes);
+              
+            //insertStock(shoesDAO, shoes);
+        }
+            
+        
+    }
 //    public void saveDomResultToDatabaseName(DOMResult domResult)throws JAXBException, SQLException, ClassNotFoundException{
-//        Stocks stocks = new Stocks();
-//        stocks = (Stocks) JAXBUtil.unmarshal(stocks.getClass(), domResult.getNode());
-//        StockDAO stockDAO = new StockDAO();
-//        for (Stock stock : stocks.getStock()) {
-//   //        System.out.println(stock.getSymbol()+"-"+stock.getPe()+"-"+stock.getEps()+"-"+stock.getRoa()+"-"+stock.getRoe()
-//  //          +"-"+stock.getBeta());
-//  //        System.out.println(stock.getMarketCap());
+//        Stocks shoess = new Stocks();
+//        shoess = (Stocks) JAXBUtil.unmarshal(shoess.getClass(), domResult.getNode());
+//        StockDAO shoesDAO = new StockDAO();
+//        for (Stock shoes : shoess.getStock()) {
+//   //        System.out.println(shoes.getSymbol()+"-"+shoes.getPe()+"-"+shoes.getEps()+"-"+shoes.getRoa()+"-"+shoes.getRoe()
+//  //          +"-"+shoes.getBeta());
+//  //        System.out.println(shoes.getMarketCap());
 //            
 //           
 //             
 //              
-//            stockDAO.insertName(stock);
+//            shoesDAO.insertName(shoes);
 //        }
 //            
 //        
@@ -70,6 +66,6 @@
 //        }    
 //        
 //    }
-//    
-//   
-//}
+    
+   
+}

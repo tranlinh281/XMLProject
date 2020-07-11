@@ -7,6 +7,7 @@ package linhtt.resolvers;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -36,6 +37,7 @@ public class UltimateURIResolver implements URIResolver, Serializable {
     @Override
     public Source resolve(String href, String base) throws TransformerException {
         System.out.println("reso;");
+        System.out.println(href);
         if (href != null) {
             try {
                 //     URLConnection urlConnection = (URLConnection) new URL(href).openConnection();
@@ -59,6 +61,7 @@ public class UltimateURIResolver implements URIResolver, Serializable {
 
     private StreamSource preProcessInputStream(InputStream http) throws IOException {
         String httpString = "<html>" + parseInputStreamToString(http) + "</html>";
+        System.out.println(httpString);
 
         httpString = httpString.replaceAll("\n", "");
         httpString = httpString.replaceAll("&nbsp;", "");
@@ -71,18 +74,17 @@ public class UltimateURIResolver implements URIResolver, Serializable {
         XmlSyntaxChecker xmlRefiner = new XmlSyntaxChecker();
         httpString = xmlRefiner.check(httpString);
         http = parseStringToInputStream(httpString);
-        System.out.println(httpString);
-        
-//          try {
-//            FileWriter test = new FileWriter("D:\\testname.txt");
-//        test.write(httpString);
-//        test.close();
-//        } catch (Exception e) {
-//            System.out.println(e.getMessage());
-//            
-//        }
-         String utf8HttpString = UTF8StringHelper.convertFromUTF8(httpString);
-        //
+
+          try {
+              FileWriter test = new FileWriter("D:\\testname.txt");
+        test.write(httpString);
+        test.close();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            
+        }
+          System.out.println("mè ơi đm");
+        String utf8HttpString = UTF8StringHelper.convertFromUTF8(httpString);
         http = parseStringToInputStream(utf8HttpString);
         return new StreamSource(http);
     }

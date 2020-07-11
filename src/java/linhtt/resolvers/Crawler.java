@@ -28,6 +28,10 @@ import linhtt.utils.XmlUtils;
  */
 public class Crawler implements Serializable {
 
+//    public static void main(String[] args) throws FileNotFoundException, TransformerException {
+//        crawl("D:\\Learn\\FPTU\\CN8\\LinhTTSE63176_XML\\build\\web\\WEB-INF\\assets\\configs\\xml\\shoes.xml", "WEB-INF\\xsl\\hudo.xsl");
+//    }
+    
     public static List<DOMResult> crawlPaginatedSite(
             String xmlConfigPath,
             String xslPath,
@@ -69,6 +73,7 @@ public class Crawler implements Serializable {
 
     public static DOMResult crawl(String xmlPath, String xslPath)
             throws FileNotFoundException, TransformerException {
+
         StreamSource xslCate = new StreamSource(xslPath);
         InputStream inputStream = new FileInputStream(xmlPath);
 

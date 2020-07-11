@@ -20,13 +20,13 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="LinkDetail" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="Gender" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="Category" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="Description" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="Price" type="{http://www.w3.org/2001/XMLSchema}positiveInteger"/>
- *         &lt;element name="ImgSrc" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="linkProduct" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="gender" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="brand" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="price" type="{http://www.w3.org/2001/XMLSchema}positiveInteger"/>
+ *         &lt;element name="imgSrc" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -37,55 +37,68 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "linkDetail",
+    "linkProduct",
     "gender",
-    "category",
+    "brand",
     "name",
     "description",
     "price",
     "imgSrc"
 })
-@XmlRootElement(name = "Shoes", namespace = "https://github.com/tranlinh281/schema/shoes")
+@XmlRootElement(name = "Shoes", namespace = "https://linhtt.org/schema/shoes")
 public class Shoes {
 
-    @XmlElement(name = "LinkDetail", namespace = "https://github.com/tranlinh281/schema/shoes", required = true)
-    protected String linkDetail;
-    @XmlElement(name = "Gender", namespace = "https://github.com/tranlinh281/schema/shoes", required = true)
+    @XmlElement(namespace = "https://linhtt.org/schema/shoes", required = true)
+    protected String linkProduct;
+    @XmlElement(namespace = "https://linhtt.org/schema/shoes", required = true)
     protected String gender;
-    @XmlElement(name = "Category", namespace = "https://github.com/tranlinh281/schema/shoes", required = true)
-    protected String category;
-    @XmlElement(name = "Name", namespace = "https://github.com/tranlinh281/schema/shoes", required = true)
+    @XmlElement(namespace = "https://linhtt.org/schema/shoes", required = true)
+    protected String brand;
+    @XmlElement(namespace = "https://linhtt.org/schema/shoes", required = true)
     protected String name;
-    @XmlElement(name = "Description", namespace = "https://github.com/tranlinh281/schema/shoes", required = true)
+    @XmlElement(namespace = "https://linhtt.org/schema/shoes", required = true)
     protected String description;
-    @XmlElement(name = "Price", namespace = "https://github.com/tranlinh281/schema/shoes", required = true)
+    @XmlElement(namespace = "https://linhtt.org/schema/shoes", required = true)
     @XmlSchemaType(name = "positiveInteger")
     protected BigInteger price;
-    @XmlElement(name = "ImgSrc", namespace = "https://github.com/tranlinh281/schema/shoes", required = true)
+    @XmlElement(namespace = "https://linhtt.org/schema/shoes", required = true)
     protected String imgSrc;
 
+    public Shoes() {
+    }
+
+    public Shoes(String linkProduct, String gender, String brand, String name, String description, BigInteger price, String imgSrc) {
+        this.linkProduct = linkProduct;
+        this.gender = gender;
+        this.brand = brand;
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.imgSrc = imgSrc;
+    }
+
     /**
-     * Gets the value of the linkDetail property.
+     * Gets the value of the linkProduct property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getLinkDetail() {
-        return linkDetail;
+    public String getLinkProduct() {
+        return linkProduct;
     }
 
     /**
-     * Sets the value of the linkDetail property.
+     * Sets the value of the linkProduct property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setLinkDetail(String value) {
-        this.linkDetail = value;
+    public void setLinkProduct(String value) {
+        this.linkProduct = value;
     }
 
     /**
@@ -113,27 +126,27 @@ public class Shoes {
     }
 
     /**
-     * Gets the value of the category property.
+     * Gets the value of the brand property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getCategory() {
-        return category;
+    public String getBrand() {
+        return brand;
     }
 
     /**
-     * Sets the value of the category property.
+     * Sets the value of the brand property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setCategory(String value) {
-        this.category = value;
+    public void setBrand(String value) {
+        this.brand = value;
     }
 
     /**
