@@ -73,6 +73,7 @@ public class UltimateURIResolver implements URIResolver, Serializable {
 
         XmlSyntaxChecker xmlRefiner = new XmlSyntaxChecker();
         httpString = xmlRefiner.check(httpString);
+        System.out.println(httpString);
         http = parseStringToInputStream(httpString);
 
           try {

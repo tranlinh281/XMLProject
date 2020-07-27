@@ -40,7 +40,7 @@ public class CrawlGiaytot extends HttpServlet {
             for (String path: Sources.STYLE_SHEETS_GIAYTOT) {
                 String xslPath = realPath + path;
               
-               
+                System.out.println(xslPath);
                 DOMResult result = Crawler.crawl(xmlPath, xslPath);
                  DataResolver dataResolver = new DataResolver();
                  dataResolver.saveDomResultToDatabase(result);
